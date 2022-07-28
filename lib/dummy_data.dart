@@ -107,7 +107,7 @@ const DUMMY_MEALS = [
       duration: 2,
       isPoisson: false,
       isPoulet: false,
-      FruitDeMer: false,
+      fruitdemer: false,
       isVegetarian: false,
       isViande: false,
       prix: 1800,
@@ -156,7 +156,7 @@ const DUMMY_MEALS = [
       duration: 2,
       isPoisson: true,
       isPoulet: false,
-      FruitDeMer: false,
+      fruitdemer: false,
       isVegetarian: false,
       isViande: false,
       prix: 1500,
@@ -197,7 +197,7 @@ const DUMMY_MEALS = [
       duration: 2,
       isPoisson: false,
       isPoulet: false,
-      FruitDeMer: false,
+      fruitdemer: false,
       isVegetarian: false,
       isViande: false,
       prix: 300,
@@ -244,7 +244,7 @@ const DUMMY_MEALS = [
       duration: 2,
       isPoisson: false,
       isPoulet: false,
-      FruitDeMer: false,
+      fruitdemer: false,
       isVegetarian: false,
       isViande: false,
       prix: 300,
@@ -256,8 +256,7 @@ const DUMMY_MEALS = [
         'Les égoutter et les déposer dans un plat préalablement tapissé avec du papier absorbant.',
         'Pour la sauce, faire verser le concentré de tomates avec l\'huile, le piment mixé dans une casserole à feu doux, ajouter 20 cl d\'eau, les herbes de Provence, le cube et remuer le tout. Laisser mijoter 10 minutes.',
       ]),
-
-      Repas(
+  Repas(
       id: 'R3',
       categories: [
         'C3',
@@ -304,7 +303,7 @@ const DUMMY_MEALS = [
       duration: 2,
       isPoisson: false,
       isPoulet: true,
-      FruitDeMer: false,
+      fruitdemer: false,
       isVegetarian: false,
       isViande: true,
       prix: 300,
@@ -319,4 +318,88 @@ const DUMMY_MEALS = [
         'Préparer des petites boulettes de viande haché. Cuire dans une huile chaude et réserver.',
         'Ajouter les pois-chiches, les haricots blancs, les raisins secs et les boulettes de viande hachée au couscous. Mouiller le couscous avec une louche de sauce à la viande et aux légumes et bien mélanger.',
       ]),
+
+      Repas(
+      id: 'R9',
+      categories: [
+        'C9',
+      ],
+      title: 'Jus de tamarin',
+      imageUrl:
+          'https://resize.elle.fr/portrait_480_webp/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/jus-de-tamarin-2079792/22102492-1-fre-FR/Jus-de-tamarin.jpg',
+      imageUrlUn:
+          'https://villamaasai.fr/wp-content/uploads/2019/08/Yassa-Boeuf-Villa-Massai.jpg',
+      imageUrlDeux:
+          'https://royalsenegal.com/wp-content/uploads/2020/08/YassaGuinar.jpg',
+      imageUrlTrois:
+          'https://lesgourmandisesdekarelle.com/wp-content/uploads/2016/08/Yassa-4-1024x683.jpg',
+      ingredients: [
+        'des tamarins',
+        '100 g de sucre',
+        'eau',
+        'des glaçons',
+      ],
+      recette: [
+        'Pour 4 Personnes',
+        'Durée: 15min',
+        'Cout: facile',
+      ],
+      complexity: Complexity.Simple,
+      duration: 2,
+      isPoisson: false,
+      isPoulet: false,
+      fruitdemer: false,
+      isVegetarian: false,
+      isViande: false,
+      prix: 300,
+      steps: [
+        'Prenez un récipient, un saladier et faites couler 1 litre d\'eau.',
+        'Versez dans le saladier, vos tamarins et faites les tremper afin qu\'ils se gorgent d\'eau et perdent leur côté amer',
+        'Versez dans un saladier et malaxez le tout afin de créer le jus',
+        'Egouttez les et versez directement du sucre tout en remuant le récipient.',
+        'Sortez vos glaçons, mettez la quantité souhaitée dans votre verre et versez le jus',
+        'Voilà vous pouvez savourez votre jus de tamarin !',
+      ]),
+
+      // Repas(
+      // id: 'R1',
+      // categories: [
+      //   'C2',
+      // ],
+      // title: 'mafé',
+      // imageUrl:
+      //     'https://i.ytimg.com/vi/OexilpHWbo4/mqdefault.jpg',
+      // imageUrlUn:
+      //     'https://villamaasai.fr/wp-content/uploads/2019/08/Yassa-Boeuf-Villa-Massai.jpg',
+      // imageUrlDeux:
+      //     'https://royalsenegal.com/wp-content/uploads/2020/08/YassaGuinar.jpg',
+      // imageUrlTrois:
+      //     'https://lesgourmandisesdekarelle.com/wp-content/uploads/2016/08/Yassa-4-1024x683.jpg',
+      // ingredients: [
+      //   'des tamarins',
+      //   '100 g de sucre',
+      //   'eau',
+      //   'des glaçons',
+      // ],
+      // recette: [
+      //   'Pour 4 Personnes',
+      //   'Durée: 15min',
+      //   'Cout: facile',
+      // ],
+      // complexity: Complexity.Simple,
+      // duration: 2,
+      // isPoisson: false,
+      // isPoulet: false,
+      // fruitdemer: false,
+      // isVegetarian: false,
+      // isViande: false,
+      // prix: 300,
+      // steps: [
+      //   'Prenez un récipient, un saladier et faites couler 1 litre d\'eau.',
+      //   'Versez dans le saladier, vos tamarins et faites les tremper afin qu\'ils se gorgent d\'eau et perdent leur côté amer',
+      //   'Versez dans un saladier et malaxez le tout afin de créer le jus',
+      //   'Egouttez les et versez directement du sucre tout en remuant le récipient.',
+      //   'Sortez vos glaçons, mettez la quantité souhaitée dans votre verre et versez le jus',
+      //   'Voilà vous pouvez savourez votre jus de tamarin !',
+      // ]),
 ];

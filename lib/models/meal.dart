@@ -24,7 +24,7 @@ class Repas {
   final bool isPoisson;
   final bool isViande;
   final bool isPoulet;
-  final bool FruitDeMer;
+  final bool fruitdemer;
   final bool isVegetarian;
 
   const Repas({
@@ -44,7 +44,7 @@ class Repas {
     required this.isPoulet,
     required this.isPoisson,
     required this.isViande,
-    required this.FruitDeMer,
+    required this.fruitdemer,
     required this.isVegetarian,
   });
 }

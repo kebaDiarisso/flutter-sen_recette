@@ -7,6 +7,7 @@ import 'screens/filters_screen.dart';
 import 'dummy_data.dart';
 import 'screens/tabs_screen.dart';
 
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -36,7 +37,7 @@ class _MyAppState extends State<MyApp> {
         if( _filters['viande']!  && !meal.isViande){
           return false;
         }
-        if( _filters['vegan']!  && !meal.FruitDeMer){
+        if( _filters['vegan']!  && !meal.fruitdemer){
           return false;
         }
         if( _filters['poulet']!  && !meal.isPoulet){
@@ -78,7 +79,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'DeliMeals',
       theme: ThemeData(
-        primarySwatch: Colors.pink,
+        primarySwatch: Colors.orange,
         accentColor: Colors.orange,
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'Raleway',
@@ -95,7 +96,7 @@ class _MyAppState extends State<MyApp> {
               fontWeight: FontWeight.bold,
             )),
       ),
-      // home: CategoriesScreen(),
+      //home: CategoriesScreen(),
       initialRoute: '/', 
       routes: {
         '/': (ctx) =>  TabsScreen(_favoriteMeals),

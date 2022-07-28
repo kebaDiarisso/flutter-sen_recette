@@ -10,16 +10,15 @@ class MealItem extends StatelessWidget {
   final int duration;
   final Complexity complexity;
 
-
-
   MealItem({
     required this.id,
     required this.title,
     required this.imageUrl,
     required this.complexity,
     required this.duration,
-    
   });
+
+ // late Repas _repas;
 
   String get complexityText {
     switch (complexity) {
@@ -52,18 +51,48 @@ class MealItem extends StatelessWidget {
   //       return 'Unknown';
   //   }
   // }
+  //final List <Repas> _repas;
+
+  // Widget SendData (context){
+
+  //   return Center(
+  //     child:ListView.builder(
+  //       itemCount:_repas.length,
+  //       itemBuilder: (context,index){
+  //         return ListTile(
+  //       //     onTap:(() {
+  //       //       Navigator.push(
+  //       //   context,
+  //       //   MaterialPageRoute(
+  //       //     builder: (context) => MealDetailScreen(_repa: _repas[index]),
+  //       //   ),
+  //       // );
+  //       //     }
+  //       //   )
+  //         );
+  //       }
+  //     ),
+  //   );
+  // }
 
   void selectMeal(BuildContext context) {
+    // Navigator.push(
+    //   context,
+    //   MaterialPageRoute(
+    //     builder: (context) => MealDetailScreen(repas: Repas),
+    //   ),
+    // );
+
     Navigator.of(context)
         .pushNamed(
           MealDetailScreen.routeName,
           arguments: id,
         )
-        .then((result) => 
+        .then((result) =>
         {
-          if(result != null){
+        //  if(result != null){
            // removeItem(result)
-          }
+         // }
         }
       );
   }
@@ -77,15 +106,15 @@ class MealItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         elevation: 4,
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         child: Column(
           children: <Widget>[
             Stack(
               children: <Widget>[
                 ClipRRect(
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(15),
-                    topRight: Radius.circular(15),
+                    topRight: const Radius.circular(15),
                   ),
                   child: Image.network(
                     imageUrl,
@@ -100,13 +129,13 @@ class MealItem extends StatelessWidget {
                   child: Container(
                     width: 300,
                     color: Colors.black54,
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       vertical: 5,
                       horizontal: 20,
                     ),
                     child: Text(
                       title,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 26,
                         color: Colors.white,
                       ),
@@ -118,16 +147,16 @@ class MealItem extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   Row(
                     children: <Widget>[
-                      Icon(
+                      const Icon(
                         Icons.schedule,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 6,
                       ),
                       Text('$duration min'),
@@ -135,16 +164,15 @@ class MealItem extends StatelessWidget {
                   ),
                   Row(
                     children: <Widget>[
-                      Icon(
+                      const Icon(
                         Icons.work,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 6,
                       ),
                       Text(complexityText),
                     ],
                   ),
-                
                 ],
               ),
             ),

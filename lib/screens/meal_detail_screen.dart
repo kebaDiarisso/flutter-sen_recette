@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
 
 import '../dummy_data.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:convert';
 
-class MealDetailScreen extends StatelessWidget {
+class MealDetailScreen extends StatefulWidget {
 
   static const routeName = '/meal-detail';
 
    final Function toogleFavorite;
   final Function isFavorit;
   
-  MealDetailScreen(this.toogleFavorite, this.isFavorit);
+  MealDetailScreen(this.toogleFavorite, this.isFavorit,);
 
+  @override
+  State<MealDetailScreen> createState() => _MealDetailScreenState();
+}
+
+class _MealDetailScreenState extends State<MealDetailScreen> {
   Widget buildSectionTitle(BuildContext context, String text) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
@@ -20,6 +27,7 @@ class MealDetailScreen extends StatelessWidget {
       ),
     );
   }
+
    Widget buildSectionTitleStep(BuildContext context, String text) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
@@ -29,6 +37,12 @@ class MealDetailScreen extends StatelessWidget {
       ),
     );
   }
+
+  /****************************************************************** */
+ 
+
+
+  /****************************************************************** */
 
   Widget buildContainer(Widget child) {
     return Container(
@@ -103,9 +117,9 @@ class MealDetailScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
           child: Icon(
-            isFavorit(mealId) ? Icons.star : Icons.star_border,
+            widget.isFavorit(mealId) ? Icons.star : Icons.star_border,
           ),
-          onPressed:()=> toogleFavorite(mealId),
+          onPressed:()=> widget.toogleFavorite(mealId),
           ),
     );
   }
